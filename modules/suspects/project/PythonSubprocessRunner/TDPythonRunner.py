@@ -2,8 +2,8 @@
 Name : TDPythonRunner
 Author : wieland@MONOMANGO
 Version : 0
-Build : 3
-Savetimestamp : 2023-03-20T10:40:38.797411
+Build : 4
+Savetimestamp : 2023-03-20T11:20:02.471367
 Saveorigin : Project.toe
 Saveversion : 2022.28040
 Info Header End'''
@@ -33,10 +33,10 @@ class TDPythonRunner:
 	def Kill(self):
 		if self.process: subprocess.kill()
 
-	def Run_Sync(self):
+	def Run_Async(self):
 		self._run( subprocess.Popen )
 
-	def Run_Async(self):
+	def Run_Sync(self):
 		self._run( subprocess.Popen ).wait()
 		
 	def load_modules(self):
